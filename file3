@@ -1,1 +1,36 @@
-how is your day
+#include<stdio.h>
+void main()
+{
+int i,pos,x,n;
+int a[100];
+printf("enter the number of elements of the array: \n");
+scanf("%d",&n);
+printf("enter the of elements of the array: \n");
+for(i=0;i<n;i++)
+{
+    scanf("%d",&a[i]);
+}
+printf("the array is: \n");
+for(i=0;i<n;i++)
+{
+    printf("%d ",a[i]);
+}
+printf("\n enter the number to be inserted: \n");
+scanf("%d",&x);
+printf("enter the position to be inserted: \n");
+scanf("%d",&pos);
+for (i = n;i > pos; i--)
+    {
+    a[i] = a[i - 1];
+    }
+    a[pos] =x;
+    n++;
+
+    printf("Updated array is: ");
+for (i = 0; i < n; i++)
+    {
+    printf("%d ", a[i]);
+    }
+printf("\n");
+return 0;
+}
